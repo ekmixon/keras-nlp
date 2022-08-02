@@ -262,7 +262,7 @@ class BertEncoder(tf.keras.Model):
           'potentially-shared embedding layer object. If you contine to '
           'train this model, the embedding layer will no longer be shared. '
           'To work around this, load the model outside of the Keras API.')
-      print('WARNING: ' + warn_string)
+      print(f'WARNING: {warn_string}')
       logging.warn(warn_string)
 
     return cls(**config)

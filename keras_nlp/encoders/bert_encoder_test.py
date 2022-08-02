@@ -224,7 +224,7 @@ class BertEncoderTest(keras_parameterized.TestCase):
     self.assertAllEqual(network.get_config(), new_network.get_config())
 
     # Tests model saving/loading.
-    model_path = self.get_temp_dir() + "/model"
+    model_path = f"{self.get_temp_dir()}/model"
     network.save(model_path)
     _ = tf.keras.models.load_model(model_path)
 
